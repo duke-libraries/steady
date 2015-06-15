@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'newrelic_rpm'
 
-gem 'stead', '0.0.16'
+gem 'stead', :git => 'https://github.com/duke-libraries/stead.git'
 
 group :development do
   gem 'pry-rails'
