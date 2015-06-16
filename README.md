@@ -74,8 +74,9 @@ In the steady directory on your computer run this command, with the path to stea
 2. Access the application in a browser: [https://sleepy-ocean-6616.herokuapp.com/](https://sleepy-ocean-6616.herokuapp.com/)
 
 ### Syncing our fork with Jason Ronallo's project
-    ```
-    $ git fetch upstream
-    $ git checkout master
-    $ git merge upstream/master
-    ```
+
+```
+$ git fetch upstream
+$ git checkout master
+$ git merge upstream/master
+```
