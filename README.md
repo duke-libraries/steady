@@ -27,9 +27,9 @@ Steady converts CSV into EAD XML. This is a fork of Jason Ronallo's Steady ([htt
     ```
 
 3. Specify that steady should use the copy of stead on your computer during development.
-In the steady directory on your computer run this command:
+In the steady directory on your computer run this command, with the path to stead on your computer:
     ```
-    $ bundle config local.stead /Users/cl334/workspace/ruby_workspace/stead
+    $ bundle config local.stead /path/to/stead
     ```
 
 4. Check that you can run the Steady application locally. From within the steady directory on your computer, run this command:
@@ -43,9 +43,9 @@ In the steady directory on your computer run this command:
 
 ## Making changes to stead
 
-1. Edit, save, and test your changes
+1. Edit, save, and test your changes to stead.
 
-2. From your stead working directory commit changes to code repository
+2. From your stead working directory commit changes to the code repository.
     ```
     $ git add .
     $ git commit -m 'your commit message'
@@ -54,7 +54,14 @@ In the steady directory on your computer run this command:
 
 3. You will need to then update the copy of stead used by steady. This just updates the Gemfile.lock so that Heroku will know to pick up the latest copy of stead from our repository. From the steady directory:
     ```
-    $ bundle update --source gemname
+    $ bundle update --source stead
+    ```
+
+4. Commit the new Gemfile.lock to the steady repository. From the steady directory:
+    ```
+    $ git add .
+    $ git commit -m 'your commit message'
+    $ git push origin master
     ```
 
 ## Deploy changes to Heroku
@@ -67,4 +74,8 @@ In the steady directory on your computer run this command:
 2. Access the application in a browser: [https://sleepy-ocean-6616.herokuapp.com/](https://sleepy-ocean-6616.herokuapp.com/)
 
 ### Syncing our fork with Jason Ronallo's project
-
+    ```
+    $ git fetch upstream
+    $ git checkout master
+    $ git merge upstream/master
+    ```
