@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/duke-libraries/stead.git
-  revision: db386c4bb2fc50e6993a9a4fb5f5cbd1e3ed0f8c
+  revision: ab3d63d3f226ebe6102c97c5150fdb65f5abd3e6
+  branch: master
   specs:
     stead (0.0.16)
       nokogiri
