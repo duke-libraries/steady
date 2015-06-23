@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-md-6">
-    <h1>Steady converts CSV into EAD XML</h1>
+    <h1>Steady converts CSV into EAD</h1>
+	
+	<h3><i>This version of Steady is customized for use in the Rubenstein Library at Duke</i></h3>
 
     <h2>Upload</h2>
     <p>Choose a CSV file to upload. The file must have headers which conform to the
@@ -42,18 +44,18 @@
         <div class="well">
           <p>To import into ArchivesSpace and have instances created properly, you may need to make some other changes to the EAD. You can select and fill out the following options to try to do that for you. This is currently an experimental feature. </p>
           <%= f.label :idcontainers, "Add identifiers to containers for parent/child relationships?" %>
-          <%= check_box_tag(:idcontainers) %>
+		  <%= check_box_tag(:idcontainers) %>
 
           <div class="form-group">
-            <%= f.label :unitid, "archdesc/did/unitid" %>
+            <%= f.label :unitid, "archdesc/did/unitid (e.g. RL.10010)" %>
             <%= f.text_field :unitid, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :extent, "archdesc/did/physdesc/extent" %>
+            <%= f.label :extent, "archdesc/did/physdesc/extent (e.g. 1.2 linear_feet)" %>
             <%= f.text_field :extent, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :unitdate, "archdesc/did/unitdate" %>
+            <%= f.label :unitdate, "archdesc/did/unitdate (e.g. 1900-1920 and undated)" %>
             <%= f.text_field :unitdate, class: 'form-control' %>
           </div>
         </div>
@@ -69,9 +71,13 @@
     <hr>
 
     <%= render partial: '/pages/stead_schema' %>
+	
   </div>
   <div class="col-md-6">
-    <div class="well">
+    
+	<%= render partial: '/pages/stead_duke_container_types' %>
+	
+	<div class="well">
       <h2 id="about">About</h2>
 
       <h3>Use Cases</h3>

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/duke-libraries/stead.git
-  revision: ab3d63d3f226ebe6102c97c5150fdb65f5abd3e6
+  revision: ff0353aba6848f49532b702d70afba1a4569923b
   branch: master
   specs:
     stead (0.0.16)
@@ -65,11 +65,18 @@ GEM
     newrelic_rpm (3.6.6.147)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    nokogiri (1.6.6.2-x86-mingw32)
+      mini_portile (~> 0.6.0)
     polyglot (0.3.4)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry (0.9.12.2-x86-mingw32)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+      win32console (~> 1.3)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
     rack (1.5.2)
@@ -121,9 +128,11 @@ GEM
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    win32console (1.3.2-x86-mingw32)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   bootstrap-sass!
@@ -135,3 +144,6 @@ DEPENDENCIES
   sdoc
   stead!
   uglifier (>= 1.3.0)
+
+BUNDLED WITH
+   1.10.4
