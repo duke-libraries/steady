@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/duke-libraries/stead.git
-  revision: e13be94a8f764557b4c64064ff2125668788311a
+  revision: b016934d8694ec6148597bcbe8e3a982aaa07c6d
   branch: master
   specs:
     stead (0.0.16)
