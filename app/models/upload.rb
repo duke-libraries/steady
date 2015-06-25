@@ -2,10 +2,9 @@ class Upload
 
   include ActiveModel::Model
 
-  attr_accessor :name, :email, :organization, :csv, :unitid, :extent, :unitdate
+  attr_accessor :csv, :unitid, :extent, :unitdate
 
-  validates_presence_of :name, :csv
-  validates :email, :presence => true
+  validates_presence_of :csv
 
   def initialize(attributes = {})
     attributes.each do |name, value|
