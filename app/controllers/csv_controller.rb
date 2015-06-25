@@ -2,11 +2,11 @@ class CsvController < ApplicationController
   def parse
     @upload = Upload.new(params[:upload])
 
-    begin
-      UseMailer.use_email(@upload).deliver
-    rescue Net::SMTPAuthenticationError
-      Rails.logger.error('MAIL was not sent!')
-    end
+    # begin
+    #   UseMailer.use_email(@upload).deliver
+    # rescue Net::SMTPAuthenticationError
+    #   Rails.logger.error('MAIL was not sent!')
+    # end
 
     begin
       if @upload.valid?
